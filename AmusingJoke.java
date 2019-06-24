@@ -8,6 +8,7 @@ public class AmusingJoke {
 	String f=scan.next();
 	String p=scan.next();
 	String z=scan.next();
+	
 	p=p+f;
 	char y[]=p.toCharArray();
 	Arrays.sort(y);

@@ -16,4 +16,5 @@ public class JzzhuAndChildren {
 		}
 		System.out.println(y + 1);
 	}
+
 }
