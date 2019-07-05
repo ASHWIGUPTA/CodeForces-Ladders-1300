@@ -8,9 +8,14 @@ public class JzzhuAndChildren {
 		int l = Integer.MIN_VALUE;
 		int y = Integer.MIN_VALUE;
 		for (int i = 0; i < n; i++) {
-			int p = scan.nextInt() / m;
-			if (p >= l) {
-				l = p;
+			int r=scan.nextInt() ;
+			int z=r/m;
+			if(r%m!=0) {
+				z++;
+			}
+			int p = (int) Math.ceil(r/m  );
+			if (z >= l) {
+				l = z;
 				y = i;
 			}
 		}

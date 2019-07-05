@@ -1,14 +1,21 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class IsYourHorseshoe {
-		public static void main(String[] args) {
-			Scanner scan=new Scanner(System.in);
-		int a=scan.nextInt();
-		int b=scan.nextInt();
-		int c=scan.nextInt();
-		int d=scan.nextInt();
-		
-		int count=a<=b?(b<=c?(c<=d?3:2):1):0;
-		System.out.println(count);
-		}	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int r = 3;
+		int arr[] = new int[4];
+		for (int i = 0; i < 4; i++) {
+			arr[i] = scan.nextInt();
+		}
+		Arrays.sort(arr);
+		for (int i = 0; i < arr.length-1; i++) {
+			if (arr[i] != arr[i + 1]) {
+				r--;
+			}
+		}
+		System.out.println(r);
+
+	}
 }

@@ -13,5 +13,9 @@ public class SoftDrinking {
 		int nl=scan.nextInt();
 		int np=scan.nextInt();
 		
+		int r= k*l/nl;
+		int u=c*d;
+		int z=p/np;
+		System.out.println(Math.min(r, Math.min(u, z))/n);
 	}
 }
