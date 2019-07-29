@@ -37,13 +37,13 @@ public static void main(String[] args) {
                
            System.out.println(sum+" "+h+" "+l);
         }
-    }
+    //}
   //  System.out.println(l+" "+h);
-    ArrayList<Integer> b=new ArrayList<Integer>();
-    for(int i=l;i<h+1;i++){
-        b.add(A.get(i));
-    }
-    return b;
+	/*
+	 * ArrayList<Integer> b=new ArrayList<Integer>(); for(int i=l;i<h+1;i++){
+	 * b.add(A.get(i)); }
+	 */
+    return null;
         
     }
 

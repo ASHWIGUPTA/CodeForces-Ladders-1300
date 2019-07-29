@@ -17,6 +17,6 @@ private static int call(int[] arr) {
 	int  one=0;
 	
 		
-	return null;
+	return 1;
 }
 }
