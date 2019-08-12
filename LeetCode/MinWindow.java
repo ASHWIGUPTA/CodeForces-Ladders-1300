@@ -1,5 +1,6 @@
 package LeetCode;
 
+
 public class MinWindow {
 	public static void main(String[] args) {
 		String s = "ABDEEBCTBA";
@@ -16,7 +17,9 @@ public class MinWindow {
 			//System.out.println(l+" "+h+" "+z);
 			if(check(b,a)) {
 			 	if(h-l < z) {
-					z = h-l; x=l;y=h-1;
+					z = h-l;
+					x=l;
+					y=h-1;
 				}
 				b[s.charAt(l)-'A']--;
 				l++;

@@ -4,14 +4,15 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class ArrayDfs {
-	static HashMap<Integer, Integer> a;
-	static int arr[] = { 1, 2, 3, 4, 19, 35,64,61,62,63,15,20, 16,17, 18,7,5,6 ,56,57,58,59,60};
+	
 	static int max=0;
+	
 	static HashSet<Integer> b=new HashSet<Integer>();
 
 	public static void main(String[] args) {
-
-		a = new HashMap<Integer, Integer>();
+		int arr[] = { 100, 4, 200, 1, 3, 2};
+	
+		HashMap<Integer, Integer> 	a = new HashMap<Integer, Integer>();
 		for (int i = 0; i < arr.length; i++) {
 			a.put(arr[i], 1);
 			b.add(arr[i]);
@@ -23,7 +24,7 @@ public class ArrayDfs {
 		 */
 		for (int i = 0; i < arr.length; i++) {
 			if(b.contains(arr[i]))
-				dfs(arr[i]);
+				dfs(arr[i],a);
 		}
 		/*
 		 * System.out.println(); for (Map.Entry<Integer, Integer> b : a.entrySet()) {
@@ -33,7 +34,7 @@ public class ArrayDfs {
 	System.err.println(max);
 	}
 
-	static int dfs(int p) {
+	static int dfs(int p, HashMap<Integer, Integer> a) {
 		/*
 		 * if(a.containsKey(-p)) return a.get(-p);
 		 */if (!a.containsKey(p))
@@ -41,7 +42,7 @@ public class ArrayDfs {
 		
 		else {
 			
-		a.put(p, 1 + dfs(p + 1));
+		a.put(p, 1 + dfs(p + 1,a));
 		
 		b.remove(p);
 		b.add(-p);

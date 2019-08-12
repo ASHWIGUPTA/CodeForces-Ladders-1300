@@ -7,7 +7,7 @@ public class FancyFence {
 		for (int i = 0; i < n; i++) {
 			int a = scan.nextInt();
 
-			if (a < 59) {
+			if (360%(180-a)!=0) {
 				System.out.println("NO");
 			} else
 				System.out.println("YES");

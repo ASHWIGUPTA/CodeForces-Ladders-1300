@@ -2,36 +2,14 @@ import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class ValeraAndFruit {
-	public static void main(String[] args) throws IOException {
-		Reader r = new Reader();
-		int n = r.nextInt();
-		int v = r.nextInt();
-		int t = 0;
-		int sum = 0;
-		int ar[] = new int[3000];
-		for (int i = 0; i < n; i++) {
-			int w = r.nextInt();
-			ar[w - 1]+= r.nextInt();
-		}
-		for (int i = 0; i < ar.length; i++) {
-			int h = ar[i];
-			if (h + t >= v) {
-				sum += v;
-				t = (v - t) > 0 ? (h - v + t) < 0 ? 0 : h - v + t : h;
-			} else {
-				sum += t+h;
-				t=0;
-			}
-//System.out.println(sum+" "+t);
-		}
-		if (t >= v)
-			sum += v;
-		else
-			sum += t;
-		System.out.println(sum);
-	}
 
+public class CodeForces04 {
+	public static void main(String[] args) {
+
+		Reader scan=new Reader();
+		
+		
+	}
 	static class Reader {
 		final private int BUFFER_SIZE = 1 << 16;
 		private DataInputStream din;

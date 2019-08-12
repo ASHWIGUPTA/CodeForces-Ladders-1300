@@ -1,12 +1,20 @@
 import java.util.Scanner;
 
 public class VasilyTriangle {
-public static void main(String[] args) {
-	Scanner scan = new Scanner(System.in);
-	int a = scan.nextInt();
-	int y=scan.nextInt();
-int x1=a>0?0:-(Math.abs(a)+Math.abs(y));
-int y1=y>0?Math.abs(a)+Math.abs(y):0;
-//int x2=
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int x = scan.nextInt();
+		int y = scan.nextInt();
+
+		int p = (Math.abs(x) + Math.abs(y));
+		if (x > 0 && y > 0)
+			System.out.println("0 " + p + " " + p+" "+0);
+		else if (x < 0 && y >= 0)
+			System.out.println(-p + " 0 0 " + p);
+		else if (x >= 0 && y < 0)
+			System.out.println("0 " + (-p) + " " + p + " 0");
+		else
+			System.out.println(-p + " 0 0 " + -p);
+
 }
 }

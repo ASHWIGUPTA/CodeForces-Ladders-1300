@@ -1,35 +1,46 @@
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
 
-public class ValeraAndFruit {
+public class CodeForces05 {
 	public static void main(String[] args) throws IOException {
-		Reader r = new Reader();
-		int n = r.nextInt();
-		int v = r.nextInt();
-		int t = 0;
-		int sum = 0;
-		int ar[] = new int[3000];
-		for (int i = 0; i < n; i++) {
-			int w = r.nextInt();
-			ar[w - 1]+= r.nextInt();
-		}
-		for (int i = 0; i < ar.length; i++) {
-			int h = ar[i];
-			if (h + t >= v) {
-				sum += v;
-				t = (v - t) > 0 ? (h - v + t) < 0 ? 0 : h - v + t : h;
-			} else {
-				sum += t+h;
-				t=0;
+
+		//Reader scan = new Reader();
+	Scanner scan=new Scanner(System.in);
+		int n = scan.nextInt();
+		int m = scan.nextInt();
+
+		
+		int a[][]=new int[m][5];
+		for (int i = 0; i <n; i++) {
+			String r=scan.next().trim();
+		//	System.out.println(r.length());
+			for (int j = 0; j < r.length(); j++) {
+				a[j][r.charAt(j)-'A']++;
 			}
-//System.out.println(sum+" "+t);
 		}
-		if (t >= v)
-			sum += v;
-		else
-			sum += t;
-		System.out.println(sum);
+		int ans=0;
+		for (int i = 0; i < m; i++) {
+			int h=scan.nextInt();
+			int v=0;
+			
+			for (int j = 0; j < 5; j++) {
+			if(v<a[i][j])
+				v=a[i][j];
+			}
+			ans+=v*h;
+		}
+		
+		System.out.println(ans);
+		
+					
+		
+
 	}
 
 	static class Reader {

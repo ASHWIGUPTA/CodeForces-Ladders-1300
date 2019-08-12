@@ -28,6 +28,7 @@ public class CardsNumbers {
 
 				return;
 			}
+			String r="".indexOf("d")
 		}
 		for (int i = 0; i < ar.length; i++) {
 			if (arr[i] > 0 && ar[i] == 0) {
